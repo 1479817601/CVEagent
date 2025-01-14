@@ -73,17 +73,6 @@ workflow:
     edges:
     - data:
         isInIteration: false
-        sourceType: start
-        targetType: tool
-      id: 1736687153842-source-1736829857170-target
-      source: '1736687153842'
-      sourceHandle: source
-      target: '1736829857170'
-      targetHandle: target
-      type: custom
-      zIndex: 0
-    - data:
-        isInIteration: false
         sourceType: tool
         targetType: variable-aggregator
       id: 1736829857170-source-1736830909614-target
@@ -106,6 +95,17 @@ workflow:
       zIndex: 0
     - data:
         isInIteration: false
+        sourceType: start
+        targetType: tool
+      id: 1736687153842-source-1736829857170-target
+      source: '1736687153842'
+      sourceHandle: source
+      target: '1736829857170'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
         sourceType: parameter-extractor
         targetType: end
       id: 1736829952370-source-1736701062619-target
@@ -121,51 +121,57 @@ workflow:
         selected: false
         title: 开始
         type: start
-        variables: []
-      height: 53
+        variables:
+        - label: cveid
+          max_length: 48
+          options: []
+          required: true
+          type: text-input
+          variable: cveid
+      height: 89
       id: '1736687153842'
       position:
-        x: -32.02945016062864
+        x: 184.97054983937113
         y: 250.4466067595535
       positionAbsolute:
-        x: -32.02945016062864
+        x: 184.97054983937113
         y: 250.4466067595535
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
-      width: 244
+      width: 243
     - data:
         desc: ''
         outputs:
         - value_selector:
           - '1736829952370'
           - Description
-          variable: result1
+          variable: Descripition
         - value_selector:
           - '1736829952370'
           - CWE
-          variable: re2
+          variable: CWE
         - value_selector:
           - '1736829952370'
           - kasc
-          variable: re3
-        selected: false
+          variable: KnownAffectedConfigurationsSoftware
+        selected: true
         title: 结束
         type: end
       height: 141
       id: '1736701062619'
       position:
-        x: 1644.5203425585735
-        y: 233.93359030952388
+        x: 2013.0235719809398
+        y: 250.4466067595535
       positionAbsolute:
-        x: 1644.5203425585735
-        y: 233.93359030952388
+        x: 2013.0235719809398
+        y: 250.4466067595535
       selected: true
       sourcePosition: right
       targetPosition: left
       type: custom
-      width: 244
+      width: 243
     - data:
         desc: ''
         provider_id: webscraper
@@ -182,21 +188,21 @@ workflow:
         tool_parameters:
           url:
             type: mixed
-            value: https://nvd.nist.gov/vuln/detail/CVE-2023-5119
+            value: https://nvd.nist.gov/vuln/detail/{{#1736687153842.cveid#}}
         type: tool
       height: 115
       id: '1736829857170'
       position:
-        x: 426.02232419926133
+        x: 638.0223241992614
         y: 250.4466067595535
       positionAbsolute:
-        x: 426.02232419926133
+        x: 638.0223241992614
         y: 250.4466067595535
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
-      width: 244
+      width: 243
     - data:
         desc: ''
         instruction: ''
@@ -224,7 +230,7 @@ workflow:
         - text
         reasoning_mode: prompt
         selected: false
-        title: 参数提取器
+        title: 参数提取器 2
         type: parameter-extractor
         variables: []
         vision:
@@ -232,16 +238,16 @@ workflow:
       height: 97
       id: '1736829952370'
       position:
-        x: 1139.3903205640747
+        x: 1439.3903205640747
         y: 250.4466067595535
       positionAbsolute:
-        x: 1139.3903205640747
+        x: 1439.3903205640747
         y: 250.4466067595535
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
-      width: 244
+      width: 243
     - data:
         desc: ''
         output_type: string
@@ -251,20 +257,20 @@ workflow:
         variables:
         - - '1736829857170'
           - text
-      height: 108
+      height: 107
       id: '1736830909614'
       position:
-        x: 803.3903205640747
+        x: 1103.3903205640747
         y: 250.4466067595535
       positionAbsolute:
-        x: 803.3903205640747
+        x: 1103.3903205640747
         y: 250.4466067595535
       selected: false
       sourcePosition: right
       targetPosition: left
       type: custom
-      width: 244
+      width: 243
     viewport:
-      x: -37.83966121701883
-      y: 359.3163708246004
-      zoom: 0.8705505632961241
+      x: -60.66751652145081
+      y: 192.5812113665457
+      zoom: 0.7578582832551999
