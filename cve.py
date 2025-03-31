@@ -51,7 +51,7 @@ if __name__ == "__main__":
     CVE_DF = load_cve_data("test_one.xlsx")
     
     # 安全获取API密钥（建议使用环境变量）
-    api_key = "sk-u3ph8f8eivL6YnttJdgwM8imj3lPE0MPJs5SrF1nTkqJZkXs"
+    api_key = "sk-xxx"
     
     # 初始化模型（兼容性配置）
     model_bind = ChatOpenAI(
